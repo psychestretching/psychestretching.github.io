@@ -2,183 +2,63 @@ body {
   margin: 0;
   min-height: 100vh;
   font-family: 'Rubik Burned', cursive, monospace;
-  color: #ededed;
+  color: #e0e0e0;
   background: url('texture.png');
   background-repeat: repeat;
   background-size: 400px 300px;
-  animation: bg-scroll 30s linear infinite;
-  /* Make it a bit dirty */
-  filter: contrast(1.2) brightness(0.95) grayscale(0.1);
-  letter-spacing: 0.5px;
+  /* Animate the background for a scrolling effect */
+  animation: bg-scroll 20s linear infinite;
 }
 
 @keyframes bg-scroll {
   from { background-position: 0 0; }
-  to   { background-position: 1200px 900px; }
+  to   { background-position: 800px 600px; }
 }
 
-.grunge-border {
-  max-width: 680px;
-  margin: 28px auto;
-  background: rgba(24, 24, 24, 0.93);
-  border: 8px solid #222;
-  border-image: repeating-linear-gradient(135deg, #000, #444 12px, #111 14px, #222 16px) 8;
-  box-shadow: 0 0 64px #000b, 0 0 0 8px #111 inset, 0 0 0 2px #fff inset;
-  padding: 0 0 16px 0;
-  position: relative;
+.oldweb-border {
+  max-width: 720px;
+  margin: 40px auto;
+  background: rgba(30, 30, 30, 0.96);
+  border: 4px ridge #aaa;
+  box-shadow: 0 0 40px #000a;
+  padding: 32px 24px;
+  border-radius: 8px;
 }
 
-header {
-  position: relative;
-  background: rgba(28,28,28,0.89);
-  border-bottom: 4px dashed #888;
-  padding: 12px 0 4px 0;
+header, footer {
   text-align: center;
 }
 
-.gif-left, .gif-right {
-  width: 48px;
-  height: auto;
-  position: absolute;
-  top: 14px;
-}
-
-.gif-left {
-  left: 7px;
-}
-.gif-right {
-  right: 7px;
+h1, h2 {
+  font-family: 'Rubik Burned', cursive, monospace;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
 }
 
 h1 {
-  font-family: 'Rubik Burned', cursive, monospace;
-  font-size: 2.2em;
-  margin: 0 0 6px 0;
-  color: #ff0;
-  text-shadow: 2px 2px 0 #222, 0 0 6px #0f0;
-  letter-spacing: 1.5px;
-  background: none;
-  display: inline-block;
-  padding: 0 16px;
-}
-
-nav {
-  margin-top: 18px;
-}
-nav a {
-  font-family: 'Rubik Burned', cursive, monospace;
-  color: #fff;
-  background: #222;
-  border: 3px ridge #00ff99;
-  text-decoration: none;
-  margin: 0 7px;
-  padding: 4px 18px;
-  font-size: 1.1em;
-  box-shadow: 2px 2px 0 #000;
-  transition: 0.1s;
-  text-transform: uppercase;
-}
-nav a:hover {
-  background: #ff0;
-  color: #111;
-  border-color: #900;
-  text-shadow: none;
-}
-
-main {
-  padding: 24px 24px 0 24px;
-}
-
-section {
-  margin-bottom: 22px;
-  background: rgba(34, 34, 34, 0.86);
-  border: 3px dashed #888;
-  box-shadow: 0 2px 10px #0007 inset;
-  padding: 16px 16px 10px 16px;
-  border-radius: 0;
-  position: relative;
+  font-size: 2.5em;
+  text-shadow: 2px 2px 0 #444, 4px 4px 0 #000;
 }
 
 h2 {
-  font-size: 1.2em;
-  color: #0ff;
-  background: #111;
-  border-left: 8px solid #ff0;
-  padding: 2px 8px 2px 12px;
-  margin: -12px 0 12px -16px;
-  text-shadow: 1px 1px 0 #000;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  display: inline-block;
-}
-
-ul {
-  margin: 0;
-  padding-left: 18px;
-}
-
-li {
-  margin-bottom: 8px;
-  font-size: 1em;
-}
-
-.tiny-gif {
-  vertical-align: middle;
-  width: 22px;
-}
-
-.highlight {
-  color: #ff0;
-  background: #333;
-  padding: 1px 5px;
-  border: 1px solid #900;
-  box-shadow: 1px 1px 0 #222;
-  font-style: italic;
-}
-
-.email-link {
-  color: #f0f;
-  background: #222;
-  padding: 2px 7px;
-  border: 2px solid #0ff;
-  text-decoration: none;
-  font-weight: bold;
-  letter-spacing: 2px;
-}
-.email-link:hover {
-  background: #ff0;
-  color: #222;
-  border-color: #900;
-}
-
-footer {
-  text-align: center;
-  background: #111;
-  border-top: 3px dashed #888;
-  padding: 16px 0 6px 0;
-  margin-top: 18px;
-  font-size: 0.99em;
-  letter-spacing: 0.5px;
-}
-
-.counter {
-  margin-bottom: 8px;
+  font-size: 1.5em;
+  color: #00ff99;
+  text-shadow: 1px 1px 0 #222;
 }
 
 hr {
   border: none;
-  border-top: 2px dashed #666;
-  margin: 12px 0 14px 0;
+  border-top: 2px dashed #888;
+  margin: 22px 0;
 }
 
-.footer-msg {
-  color: #ff0;
-  background: #222;
-  display: inline-block;
-  padding: 4px 10px;
-  border: 2px solid #0ff;
-  box-shadow: 1px 1px 0 #000;
-  margin-top: 6px;
+ul {
+  padding-left: 22px;
+  margin-bottom: 0;
+}
+
+li {
+  margin-bottom: 8px;
 }
 
 .blink {
@@ -186,4 +66,15 @@ hr {
 }
 @keyframes blink {
   50% { opacity: 0; }
+}
+
+a {
+  color: #00ccff;
+  text-decoration: underline;
+}
+
+a:hover {
+  color: #ffcc00;
+  background: #222;
+  border-radius: 2px;
 }
